@@ -33,26 +33,6 @@ export type FeatureCard = {
   description: string;
 };
 
-export type ProductCard = {
-  name: string;
-  description: string;
-  badge: string;
-  icon: IconKey;
-  currentKrw: number;
-  oldKrw: number;
-  gradientClassName: string;
-};
-
-export type DealCard = {
-  name: string;
-  description: string;
-  icon: IconKey;
-  iconClassName: string;
-  currentKrw: number;
-  oldKrw: number;
-  isExtra?: boolean;
-};
-
 export type CheckoutStep = {
   step: number;
   title: string;
@@ -66,8 +46,8 @@ export type FaqItem = {
 
 export const heroChips: HeroChip[] = [
   { icon: "badge-check", label: "견적 고정 10분", isDynamic: true },
-  { icon: "wallet", label: "지원 네트워크: TRC20 / ERC20" },
-  { icon: "message-square", label: "입금 확인 후 주문 확정" },
+  { icon: "wallet", label: "카드 · USDT 동시 지원" },
+  { icon: "message-square", label: "TRC20 / ERC20 네트워크 안내" },
 ];
 
 export const featureCards: FeatureCard[] = [
@@ -98,132 +78,6 @@ export const featureCards: FeatureCard[] = [
     title: "주문 상태 확인",
     description:
       "입금 확인부터 주문 확정까지 진행 상황을 한눈에 확인할 수 있습니다.",
-  },
-];
-
-export const featuredProducts: ProductCard[] = [
-  {
-    name: "iPhone 15 Pro",
-    description: "프리미엄 스마트폰을 USDT로 빠르게 결제하세요.",
-    badge: "즉시 견적 가능",
-    icon: "smartphone",
-    currentKrw: 1_349_000,
-    oldKrw: 1_499_000,
-    gradientClassName: "from-slate-950 via-slate-800 to-emerald-700",
-  },
-  {
-    name: "iPad Air",
-    description: "가벼운 작업과 엔터테인먼트를 위한 인기 태블릿.",
-    badge: "재고 문의 가능",
-    icon: "tablet",
-    currentKrw: 809_000,
-    oldKrw: 899_000,
-    gradientClassName: "from-cyan-700 via-sky-600 to-slate-900",
-  },
-  {
-    name: "MacBook Air",
-    description: "실시간 시세 기준으로 예상 결제 금액을 확인할 수 있습니다.",
-    badge: "실시간 금액 반영",
-    icon: "laptop",
-    currentKrw: 1_529_000,
-    oldKrw: 1_699_000,
-    gradientClassName: "from-amber-500 via-orange-500 to-slate-900",
-  },
-  {
-    name: "Galaxy S24 Ultra",
-    description: "강력한 성능과 선명한 디스플레이를 담은 플래그십 모델.",
-    badge: "빠른 주문 가능",
-    icon: "smartphone",
-    currentKrw: 1_439_000,
-    oldKrw: 1_599_000,
-    gradientClassName: "from-violet-700 via-indigo-700 to-slate-900",
-  },
-  {
-    name: "Galaxy Tab S9",
-    description: "합리적인 가격으로 즐기는 프리미엄 태블릿 경험.",
-    badge: "합리적 USDT 견적",
-    icon: "monitor",
-    currentKrw: 989_000,
-    oldKrw: 1_099_000,
-    gradientClassName: "from-emerald-700 via-teal-700 to-slate-900",
-  },
-];
-
-export const dealCards: DealCard[] = [
-  {
-    name: "AirPods",
-    description: "매일 사용하는 인기 무선 이어폰.",
-    icon: "headphones",
-    iconClassName: "bg-rose-50 text-rose-700",
-    currentKrw: 299_000,
-    oldKrw: 359_000,
-  },
-  {
-    name: "Buds 2",
-    description: "가볍고 편안한 데일리 무선 이어버드.",
-    icon: "headphones",
-    iconClassName: "bg-sky-50 text-sky-700",
-    currentKrw: 169_000,
-    oldKrw: 199_000,
-  },
-  {
-    name: "Keyboard",
-    description: "심플한 작업 환경을 위한 베스트셀러 키보드.",
-    icon: "keyboard",
-    iconClassName: "bg-amber-50 text-amber-700",
-    currentKrw: 129_000,
-    oldKrw: 149_000,
-  },
-  {
-    name: "Mouse",
-    description: "기본기 탄탄한 무선 마우스 특가.",
-    icon: "mouse",
-    iconClassName: "bg-emerald-50 text-emerald-700",
-    currentKrw: 119_000,
-    oldKrw: 139_000,
-  },
-  {
-    name: "Beats Speaker",
-    description: "풍부한 사운드를 담은 포터블 스피커.",
-    icon: "speaker",
-    iconClassName: "bg-violet-50 text-violet-700",
-    currentKrw: 349_000,
-    oldKrw: 399_000,
-  },
-  {
-    name: "Smart Watch",
-    description: "운동과 일상을 함께 챙기는 스마트 워치.",
-    icon: "watch",
-    iconClassName: "bg-slate-100 text-slate-700",
-    currentKrw: 389_000,
-    oldKrw: 429_000,
-  },
-  {
-    name: "Portable Speaker",
-    description: "어디서든 즐기는 콤팩트 오디오.",
-    icon: "speaker",
-    iconClassName: "bg-indigo-50 text-indigo-700",
-    currentKrw: 169_000,
-    oldKrw: 199_000,
-    isExtra: true,
-  },
-  {
-    name: "Fast Charger",
-    description: "일상에서 바로 쓰기 좋은 필수 충전 액세서리.",
-    icon: "battery-charging",
-    iconClassName: "bg-lime-50 text-lime-700",
-    currentKrw: 49_000,
-    oldKrw: 59_000,
-    isExtra: true,
-  },
-  {
-    name: "Premium Cable Kit",
-    description: "다양한 기기에 맞춰 쓰는 프리미엄 케이블 세트.",
-    icon: "cable",
-    iconClassName: "bg-fuchsia-50 text-fuchsia-700",
-    currentKrw: 89_000,
-    oldKrw: 109_000,
-    isExtra: true,
   },
 ];
 
